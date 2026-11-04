@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Mover Guindastes | Aluguel de guindaste, munck e container em Itaquaquecetuba</title>
+<meta name="description" content="Içamento e transporte de cargas pesadas. Aluguel de guindaste até 80 t, caminhão munck e containers com vistoria técnica gratuita. Grande SP e Litoral.">
+<link rel="icon" href="https://mover.com.br/wp-content/uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="assets/js/site.js"></script>
+<style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#F4F3EF;color:#141412;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}img{max-width:100%}a{color:#19206E;text-decoration:none}a:hover{color:#141A5C}::selection{background:#FFCE07;color:#141412}:focus-visible{outline:2px solid #FFCE07;outline-offset:3px}</style>
+</helmet>
+<dc-import name="Header" active="inicio" hint-size="100%,72px"></dc-import>
+<main id="conteudo" style="padding-top:72px">
+
+<sc-if value="{{ heroFoto }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Início hero foto" style="position:relative;min-height:max(600px, calc(100svh - 72px));display:flex;align-items:flex-end;background:#141A5C;overflow:hidden;color:#FFFFFF">
+  <img src="https://mover.com.br/wp-content/uploads/transporte-de-maquinas-cargas-pesadas-01.jpg" alt="Equipe da Mover transportando máquina pesada" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <div style="position:absolute;inset:0;background:rgba(12,14,36,0.62)"></div>
+  <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:96px clamp(16px,4vw,48px) 80px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#FFCE07">Itaquaquecetuba · Grande SP e Litoral</div>
+    <h1 style="margin:24px 0 0;max-width:920px;font-size:clamp(48px,7.5vw,96px);line-height:0.95;font-weight:800;letter-spacing:-0.045em;text-wrap:balance">Içamento e transporte<br>de cargas pesadas.</h1>
+    <p style="margin:32px 0 0;max-width:560px;font-size:18px;line-height:28px;color:rgba(255,255,255,0.88);text-wrap:pretty">Aluguel de guindaste, caminhão munck e containers, com vistoria técnica gratuita e plano de rigging em cada operação.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px">
+      <a href="contato.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;background:#FFCE07;color:#141412;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1),background-color 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#F5C400;color:#141412;transform:translateY(-2px)" style-active="transform:scale(0.98)">Pedir orçamento<i class="ph ph-arrow-right"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;padding:15px 23px;border:1px solid rgba(255,255,255,0.7);color:#FFFFFF;font-size:16px;line-height:24px;font-weight:600;transition:background-color 500ms cubic-bezier(0.32,0.72,0,1),transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:rgba(255,255,255,0.12);color:#FFFFFF;transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph ph-whatsapp-logo" style="font-size:20px"></i>WhatsApp</a>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ heroSplit }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Início hero dividido" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));min-height:calc(100svh - 72px);border-bottom:1px solid rgba(20,20,18,0.14)">
+  <div style="display:flex;flex-direction:column;justify-content:center;padding:80px clamp(16px,4vw,64px)">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">Itaquaquecetuba · Grande SP e Litoral</div>
+    <h1 style="margin:24px 0 0;max-width:680px;font-size:clamp(48px,6vw,84px);line-height:0.95;font-weight:800;letter-spacing:-0.045em;text-wrap:balance">Içamento e transporte de cargas pesadas.</h1>
+    <p style="margin:32px 0 0;max-width:520px;font-size:18px;line-height:28px;color:#3C3B36;text-wrap:pretty">Aluguel de guindaste, caminhão munck e containers, com vistoria técnica gratuita e plano de rigging em cada operação.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px">
+      <a href="contato.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;background:#FFCE07;color:#141412;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="color:#141412;transform:translateY(-2px)" style-active="transform:scale(0.98)">Pedir orçamento<i class="ph ph-arrow-right"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;padding:15px 23px;border:1px solid #19206E;color:#19206E;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:rgba(25,32,110,0.06);transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph ph-whatsapp-logo" style="font-size:20px"></i>WhatsApp</a>
+    </div>
+  </div>
+  <div style="position:relative;min-height:420px;background:#EAE8E2">
+    <img src="https://mover.com.br/wp-content/uploads/mover-guindastes-03.jpg" alt="Guindaste da Mover em operação" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ showStats }}" hint-placeholder-val="{{ true }}">
+<section aria-label="Números da Mover" style="border-bottom:1px solid rgba(20,20,18,0.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,4vw,48px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1px;background:rgba(20,20,18,0.14)">
+      <div style="background:#F4F3EF;padding:32px 24px 32px 0;display:grid;gap:8px"><span style="font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.04em">10+</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#57564F">Anos de operação</span></div>
+      <div style="background:#F4F3EF;padding:32px 24px;display:grid;gap:8px"><span style="font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.04em">70 t</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#57564F">Por içamento</span></div>
+      <div style="background:#F4F3EF;padding:32px 24px;display:grid;gap:8px"><span style="font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.04em">24 h</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#57564F">Atendimento de emergência</span></div>
+      <div style="background:#F4F3EF;padding:32px 24px;display:grid;gap:8px"><span style="font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.04em;color:#19206E">Grátis</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#57564F">Vistoria técnica no local</span></div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<section id="quem-somos" data-screen-label="Quem somos" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:48px;align-items:start">
+    <div data-reveal="">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">01 — Quem somos</div>
+      <h2 style="margin:16px 0 0;font-size:clamp(36px,4vw,48px);line-height:1;font-weight:800;letter-spacing:-0.035em;text-wrap:balance">Uma década movendo a indústria paulista.</h2>
+      <p style="margin:24px 0 0;font-size:18px;line-height:28px;color:#3C3B36;text-wrap:pretty">Para içar e transportar carga pesada é preciso conhecimento técnico, segurança e responsabilidade. A Mover reúne os três em uma frota própria de guindastes, caminhões munck, carretas e containers.</p>
+      <p style="margin:16px 0 0;font-size:16px;line-height:24px;color:#57564F;text-wrap:pretty">Estamos em Itaquaquecetuba e atendemos toda a Grande São Paulo e o Litoral, para clientes públicos e privados.</p>
+      <a href="quem-somos.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-size:16px;line-height:24px;font-weight:600;color:#19206E;padding-bottom:4px;border-bottom:2px solid #FFCE07" style-hover="color:#141A5C;gap:12px">Conheça a Mover<i class="ph ph-arrow-right"></i></a>
+    </div>
+    <div data-reveal="" style="position:relative">
+      <div style="aspect-ratio:4/5;background:#EAE8E2;overflow:hidden"><img src="https://mover.com.br/wp-content/uploads/mover-guindastes-01.jpg" alt="Operação de içamento da Mover" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:absolute;left:-1px;bottom:-1px;background:#19206E;color:#FFFFFF;padding:24px;display:grid;gap:4px">
+        <span style="font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.04em">10+</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#FFCE07">Anos de içamentos</span>
+      </div>
+    </div>
+    <div data-reveal="" style="background:#EAE8E2;padding:32px">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">Setores atendidos</div>
+      <ol style="list-style:none;margin:24px 0 0;padding:0">
+        <sc-for list="{{ setores }}" as="s" hint-placeholder-count="8">
+          <li style="display:grid;grid-template-columns:40px minmax(0,1fr);padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px;font-weight:600"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:24px;font-weight:400;color:#57564F">{{ s.n }}</span>{{ s.t }}</li>
+        </sc-for>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="equipamentos" data-screen-label="Equipamentos" style="background:#19206E;color:#FFFFFF">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+      <div data-reveal="">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#FFCE07">02 — Equipamentos</div>
+        <h2 style="margin:16px 0 0;max-width:680px;font-size:clamp(36px,4.5vw,60px);line-height:1;font-weight:800;letter-spacing:-0.035em;text-wrap:balance">Frota própria para cada tipo de carga.</h2>
+      </div>
+      <p style="margin:0;max-width:400px;font-size:16px;line-height:24px;color:rgba(255,255,255,0.8)">Equipamentos revisados com frequência e submetidos a testes de desempenho antes de cada locação.</p>
+    </div>
+    <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
+      <a href="guindaste.html" data-reveal="" style="display:flex;flex-direction:column;color:#FFFFFF;border:1px solid rgba(255,255,255,0.2);transition:background-color 600ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="https://mover.com.br/wp-content/uploads/elementor/thumbs/guindaste-banner-01-rl8lf78fiqqt6aeppi5e4yene305fb7nm1nm8uu44a.jpg" alt="Guindaste da Mover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
+        <div style="padding:24px;display:grid;gap:12px;flex:1">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#FFCE07">01 · 20 t a 80 t</span>
+          <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">Guindaste</span>
+          <span style="font-size:16px;line-height:24px;color:rgba(255,255,255,0.8)">Içamento de cargas e máquinas, montagem industrial e pré moldados.</span>
+          <span style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;line-height:20px;font-weight:600;color:#FFCE07">Ver modelos<i class="ph ph-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="caminhao-munck.html" data-reveal="" style="display:flex;flex-direction:column;color:#FFFFFF;border:1px solid rgba(255,255,255,0.2);transition:background-color 600ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="https://mover.com.br/wp-content/uploads/elementor/thumbs/caminhao-munk-imagem-01-rl8leww7fkcnmktqdvohvj0kuuf42n2lwmh9yt9g0q.jpg" alt="Caminhão munck da Mover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
+        <div style="padding:24px;display:grid;gap:12px;flex:1">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#FFCE07">02 · 4 modelos</span>
+          <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">Caminhão munck</span>
+          <span style="font-size:16px;line-height:24px;color:rgba(255,255,255,0.8)">Braço articulado para descarga, montagem e locais de difícil acesso.</span>
+          <span style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;line-height:20px;font-weight:600;color:#FFCE07">Ver modelos<i class="ph ph-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="container.html" data-reveal="" style="display:flex;flex-direction:column;color:#FFFFFF;border:1px solid rgba(255,255,255,0.2);transition:background-color 600ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF">
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="https://mover.com.br/wp-content/uploads/elementor/thumbs/carrying-container-rl8lexu1medxy6sd8e34g0s1g8ahac6c8r4rg381ui.jpg" alt="Container sendo içado" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
+        <div style="padding:24px;display:grid;gap:12px;flex:1">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#FFCE07">03 · 20' e 40'</span>
+          <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">Container</span>
+          <span style="font-size:16px;line-height:24px;color:rgba(255,255,255,0.8)">Almoxarifado, escritório, banheiro e transporte. Locação semanal ou mensal.</span>
+          <span style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;line-height:20px;font-weight:600;color:#FFCE07">Ver tipos<i class="ph ph-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="atuacao" data-screen-label="Atuação" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">03 — Atuação</div>
+  <div style="margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px 64px;align-items:center">
+    <div>
+      <h2 style="margin:0 0 40px;font-size:clamp(36px,4vw,48px);line-height:1;font-weight:800;letter-spacing:-0.035em;text-wrap:balance">Três frentes, um mesmo rigor técnico.</h2>
+      <div style="border-bottom:1px solid rgba(20,20,18,0.14)">
+        <sc-for list="{{ atu }}" as="a" hint-placeholder-count="3">
+          <button type="button" onClick="{{ a.select }}" onMouseEnter="{{ a.select }}" onFocus="{{ a.select }}" aria-pressed="{{ a.on }}" style="position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;width:100%;text-align:left;background:none;border:0;border-top:1px solid rgba(20,20,18,0.14);padding:24px 0;cursor:pointer;font-family:inherit;color:{{ a.color }};transition:color 600ms cubic-bezier(0.32,0.72,0,1)">
+            <span style="position:absolute;left:0;top:-1px;height:2px;width:{{ a.bar }};background:#FFCE07;transition:width 800ms cubic-bezier(0.32,0.72,0,1)"></span>
+            <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:36px">{{ a.n }}</span>
+            <span>
+              <span style="display:block;font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">{{ a.t }}</span>
+              <span style="display:block;overflow:hidden;max-height:{{ a.mh }};opacity:{{ a.op }};transition:max-height 700ms cubic-bezier(0.32,0.72,0,1),opacity 700ms cubic-bezier(0.32,0.72,0,1)"><span style="display:block;padding-top:8px;font-size:16px;line-height:24px;color:#3C3B36">{{ a.d }}</span></span>
+            </span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:relative;aspect-ratio:5/4;background:#EAE8E2;overflow:hidden">
+      <sc-for list="{{ atuImgs }}" as="im" hint-placeholder-count="1">
+        <img src="{{ im.src }}" alt="{{ im.alt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:{{ im.op }};transform:{{ im.tr }};transition:opacity 800ms cubic-bezier(0.32,0.72,0,1),transform 1200ms cubic-bezier(0.32,0.72,0,1)">
+      </sc-for>
+      <div style="position:absolute;left:0;bottom:0;display:flex;align-items:center;gap:16px;background:#FFCE07;padding:12px 16px">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">{{ curN }} / 03</span>
+        <span style="font-size:16px;line-height:24px;font-weight:700">{{ curTag }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Juntos movemos o mundo" data-screen-label="Manifesto" style="background:#141A5C;color:#FFFFFF">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(80px,10vw,96px) clamp(16px,4vw,48px);display:flex;flex-wrap:wrap;gap:48px 64px">
+    <div style="flex:1 1 220px;max-width:280px;display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+      <div style="display:grid;gap:16px">
+        <span style="width:48px;height:4px;background:#FFCE07"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#FFCE07">Nosso jeito de trabalhar</span>
+      </div>
+      <a href="quem-somos.html" style="display:inline-flex;align-items:center;gap:8px;font-size:16px;line-height:24px;font-weight:600;color:#FFFFFF;padding-bottom:4px;border-bottom:2px solid #FFCE07;align-self:flex-start;transition:gap 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="color:#FFCE07;gap:12px">Conheça nossa história<i class="ph ph-arrow-right"></i></a>
+    </div>
+    <div style="flex:999 1 560px;min-width:0">
+      <p style="margin:0;max-width:960px;font-size:clamp(36px,4.6vw,60px);line-height:1.05;font-weight:800;letter-spacing:-0.035em;text-wrap:balance"><sc-for list="{{ words }}" as="w" hint-placeholder-count="0"><span data-word="" style="opacity:0.25;color:{{ w.c }}">{{ w.t }}</span></sc-for></p>
+      <div style="margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.72)">
+        <span>Vistoria · Cálculo · Plano · Execução</span>
+        <span>Mover Guindastes</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" data-screen-label="Serviços" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+  <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">04 — Serviços</div>
+      <h2 style="margin:16px 0 0;max-width:680px;font-size:clamp(36px,4.5vw,60px);line-height:1;font-weight:800;letter-spacing:-0.035em;text-wrap:balance">Dez serviços, uma equipe do início ao fim.</h2>
+    </div>
+  </div>
+  <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;align-items:stretch">
+    <div data-reveal="" style="border:1px solid rgba(20,20,18,0.16);padding:32px;display:flex;flex-direction:column">
+      <i class="ph ph-wrench" style="font-size:32px;color:#19206E"></i>
+      <h3 style="margin:24px 0 0;font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Montagem</h3>
+      <ul style="list-style:none;margin:24px 0 0;padding:0;display:grid">
+        <li style="padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px">Estrutura metálica</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px">Estrutura pré fabricada de concreto</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px">Montagem e desmontagem de máquinas e equipamentos</li>
+      </ul>
+    </div>
+    <div data-reveal="" style="background:#19206E;color:#FFFFFF;padding:32px;display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start"><i class="ph ph-truck" style="font-size:32px;color:#FFCE07"></i><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#FFCE07">Mais pedido</span></div>
+      <h3 style="margin:24px 0 0;font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Mudança e movimentação</h3>
+      <ul style="list-style:none;margin:24px 0 0;padding:0;display:grid">
+        <li style="padding:12px 0;border-top:1px solid rgba(255,255,255,0.2);font-size:16px;line-height:24px">Mudanças industriais, sua empresa em outro endereço</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(255,255,255,0.2);font-size:16px;line-height:24px">Movimentação interna e mudança de layout</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(255,255,255,0.2);font-size:16px;line-height:24px">Conteinerização e desconteinerização</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(255,255,255,0.2);font-size:16px;line-height:24px">Container 20' e 40' para almoxarifado e escritório</li>
+      </ul>
+    </div>
+    <div data-reveal="" style="border:1px solid rgba(20,20,18,0.16);padding:32px;display:flex;flex-direction:column">
+      <i class="ph ph-lifebuoy" style="font-size:32px;color:#19206E"></i>
+      <h3 style="margin:24px 0 0;font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Suporte à operação</h3>
+      <ul style="list-style:none;margin:24px 0 0;padding:0;display:grid">
+        <li style="padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px">Atendimento 24 h</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px">Frota própria e frota de apoio</li>
+        <li style="padding:12px 0;border-top:1px solid rgba(20,20,18,0.14);font-size:16px;line-height:24px">Vistorias técnicas gratuitas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="rigging" data-screen-label="Plano de rigging" style="background:#EAE8E2">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+    <div data-reveal="" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">05 — Plano de rigging</div>
+        <h2 style="margin:16px 0 0;font-size:clamp(36px,4.5vw,60px);line-height:1;font-weight:800;letter-spacing:-0.035em">Nada sobe sem plano.</h2>
+      </div>
+      <p style="margin:0;max-width:440px;font-size:16px;line-height:24px;color:#3C3B36">Engenheiro mecânico e responsável técnico participam de cada etapa, da visita ao último movimento da carga.</p>
+    </div>
+    <ol style="list-style:none;margin:64px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:32px">
+      <li data-reveal="" style="padding-top:24px;border-top:2px solid #19206E;display:grid;gap:12px;align-content:start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">Etapa 01</span><span style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Visita técnica</span><span style="font-size:16px;line-height:24px;color:#3C3B36">Conhecemos o local, o acesso e o solo onde a carga será movimentada.</span></li>
+      <li data-reveal="" style="padding-top:24px;border-top:2px solid #19206E;display:grid;gap:12px;align-content:start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">Etapa 02</span><span style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Plano de rigging</span><span style="font-size:16px;line-height:24px;color:#3C3B36">Definimos equipamento, acessórios e sequência de movimentos com o menor recurso necessário.</span></li>
+      <li data-reveal="" style="padding-top:24px;border-top:2px solid #19206E;display:grid;gap:12px;align-content:start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">Etapa 03</span><span style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Revisão</span><span style="font-size:16px;line-height:24px;color:#3C3B36">Os engenheiros revisam cada etapa com os dados coletados antes de liberar a operação.</span></li>
+      <li data-reveal="" style="padding-top:24px;border-top:2px solid #FFCE07;display:grid;gap:12px;align-content:start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">Etapa 04</span><span style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Execução segura</span><span style="font-size:16px;line-height:24px;color:#3C3B36">A carga sobe com supervisão técnica e a segurança de todos os envolvidos em primeiro lugar.</span></li>
+    </ol>
+    <div data-reveal="" style="margin-top:64px;aspect-ratio:21/9;background:#D9D6CE;overflow:hidden"><img src="https://mover.com.br/wp-content/uploads/mover-guindastes-06.jpg" alt="Panorâmica de operação com guindaste da Mover" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+  </div>
+</section>
+
+<section id="por-que" data-screen-label="Por que a Mover" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+  <div data-reveal="">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">06 — Por que a Mover</div>
+    <h2 style="margin:16px 0 0;max-width:680px;font-size:clamp(36px,4.5vw,60px);line-height:1;font-weight:800;letter-spacing:-0.035em;text-wrap:balance">Quatro compromissos em toda operação.</h2>
+  </div>
+  <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1px;background:rgba(20,20,18,0.14);border:1px solid rgba(20,20,18,0.14)">
+    <div data-reveal="" style="background:#F4F3EF;padding:32px;display:grid;gap:16px;align-content:start"><i class="ph ph-buildings" style="font-size:32px;color:#19206E"></i><h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Profissionalismo e solidez</h3><p style="margin:0;font-size:16px;line-height:24px;color:#3C3B36">Mais de dez anos atendendo indústria, construção e setor público com equipe própria e engenheiro responsável.</p></div>
+    <div data-reveal="" style="background:#F4F3EF;padding:32px;display:grid;gap:16px;align-content:start"><i class="ph ph-handshake" style="font-size:32px;color:#19206E"></i><h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Ética e comprometimento</h3><p style="margin:0;font-size:16px;line-height:24px;color:#3C3B36">Prazo combinado é prazo cumprido. O orçamento diz o que será feito, com qual equipamento e por quem.</p></div>
+    <div data-reveal="" style="background:#F4F3EF;padding:32px;display:grid;gap:16px;align-content:start"><i class="ph ph-shield-check" style="font-size:32px;color:#19206E"></i><h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Excelência e segurança</h3><p style="margin:0;font-size:16px;line-height:24px;color:#3C3B36">Frota revisada, operadores qualificados e plano aprovado antes de qualquer içamento.</p></div>
+    <div data-reveal="" style="background:#F4F3EF;padding:32px;display:grid;gap:16px;align-content:start"><i class="ph ph-headset" style="font-size:32px;color:#19206E"></i><h3 style="margin:0;font-size:20px;line-height:28px;font-weight:700">Suporte e garantia</h3><p style="margin:0;font-size:16px;line-height:24px;color:#3C3B36">Se um equipamento falhar, trocamos sem custo adicional. Emergências atendidas 24 h.</p></div>
+  </div>
+</section>
+
+<section id="depoimentos" data-screen-label="Depoimentos" style="scroll-margin-top:72px;border-top:1px solid rgba(20,20,18,0.14)">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
+    <div data-reveal="">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">07 — Depoimentos</div>
+      <h2 style="margin:16px 0 0;max-width:680px;font-size:clamp(36px,4.5vw,60px);line-height:1;font-weight:800;letter-spacing:-0.035em;text-wrap:balance">Quem contratou, recomenda.</h2>
+    </div>
+    <figure data-reveal="" style="margin:64px 0 0;background:#19206E;color:#FFFFFF;padding:clamp(32px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),auto));gap:24px 48px;align-items:start">
+      <span aria-hidden="true" style="font-size:clamp(96px,12vw,128px);line-height:0.8;font-weight:800;color:#FFCE07">“</span>
+      <div>
+        <blockquote style="margin:0;max-width:860px;font-size:clamp(30px,3.6vw,48px);line-height:1.1;font-weight:700;letter-spacing:-0.03em;text-wrap:balance">A Mover cumpriu o prazo. Trabalharam com muito profissionalismo e qualidade. Recomendo com tranquilidade.</blockquote>
+        <figcaption style="margin-top:40px;display:flex;align-items:center;gap:16px">
+          <span aria-hidden="true" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#FFCE07;color:#19206E;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">RC</span>
+          <span style="display:grid"><span style="font-size:16px;line-height:24px;font-weight:700">Ricardo Chaves</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:rgba(255,255,255,0.75)">Gerente administrativo</span></span>
+        </figcaption>
+      </div>
+    </figure>
+    <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:24px">
+      <figure data-reveal="" style="margin:0;border:1px solid rgba(20,20,18,0.16);padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+        <blockquote style="margin:0;font-size:24px;line-height:32px;font-weight:600;letter-spacing:-0.02em;text-wrap:pretty"><span aria-hidden="true" style="color:#19206E">“</span>Contratamos a Mover para finalizar o que outra empresa havia deixado inacabado. Dessa vez acertamos.</blockquote>
+        <figcaption style="display:flex;align-items:center;gap:16px">
+          <span aria-hidden="true" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#19206E;color:#FFFFFF;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">AF</span>
+          <span style="display:grid"><span style="font-size:16px;line-height:24px;font-weight:700">Alexandre Ferraz</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#57564F">Sócio gerente</span></span>
+        </figcaption>
+      </figure>
+      <figure data-reveal="" style="margin:0;border:1px solid rgba(20,20,18,0.16);padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+        <blockquote style="margin:0;font-size:24px;line-height:32px;font-weight:600;letter-spacing:-0.02em;text-wrap:pretty"><span aria-hidden="true" style="color:#19206E">“</span>Gostamos do trabalho da Mover. Em todas as fases do projeto nos mantiveram a par da obra.</blockquote>
+        <figcaption style="display:flex;align-items:center;gap:16px">
+          <span aria-hidden="true" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#EAE8E2;color:#19206E;font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:600">AR</span>
+          <span style="display:grid"><span style="font-size:16px;line-height:24px;font-weight:700">Alexander Ribeiro</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#57564F">Seven Communications</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+<dc-import name="CtaOrcamento" hint-size="100%,760px"></dc-import>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;foto&quot;,&quot;dividido&quot;],&quot;default&quot;:&quot;foto&quot;,&quot;tsType&quot;:&quot;'foto' | 'dividido'&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  state = { atu: 0 };
+  renderVals() {
+    const v = this.props.heroVariant ?? 'foto';
+    const U = 'https://mover.com.br/wp-content/uploads/';
+    const atuData = [
+      { n: '01', t: 'Transporte e movimentação', d: 'Transporte e remoção de máquinas e movimentação de cargas pesadas, dentro ou fora da planta.', tag: 'Máquinas e cargas pesadas', src: U + 'elementor/thumbs/transporte-de-maquinas-cargas-pesadas-01-rl8lfq19id9auu6wtgqyygmekx9bxvpd6azrz4gj3s.jpg', alt: 'Transporte de máquina pesada' },
+      { n: '02', t: 'Içamentos', d: 'Estruturas que erguem cargas de até 70 toneladas, com equipe capacitada e plano aprovado.', tag: 'Até 70 t por içamento', src: U + 'mover-guindastes-07.jpg', alt: 'Içamento de carga pesada' },
+      { n: '03', t: 'Mudança industrial', d: 'Remoções técnicas, instalações industriais e mudança de layout com todos os equipamentos necessários.', tag: 'Layout e remoção técnica', src: U + 'mover-guindastes-04.jpg', alt: 'Mudança industrial' }
+    ];
+    const cur = this.state.atu;
+    const tagline = 'Juntos movemos o mundo. Cada içamento começa no chão, com vistoria, cálculo e um plano que toda a equipe entende.';
+    return {
+      heroFoto: v === 'foto', heroSplit: v === 'dividido',
+      showStats: this.props.showStats ?? true,
+      setores: ['Siderurgia', 'Mineração', 'Química e petroquímica', 'Usinas hidrelétricas', 'Papel e celulose', 'Metalurgia', 'Gráficas', 'Construção civil'].map((t, i) => ({ t, n: String(i + 1).padStart(2, '0') })),
+      atu: atuData.map((a, i) => ({
+        ...a, on: i === cur,
+        color: i === cur ? '#141412' : 'rgba(20,20,18,0.42)',
+        bar: i === cur ? '100%' : '0%', mh: i === cur ? '120px' : '0px', op: i === cur ? 1 : 0,
+        select: () => this.state.atu !== i && this.setState({ atu: i })
+      })),
+      atuImgs: atuData.map((a, i) => ({ src: a.src, alt: a.alt, op: i === cur ? 1 : 0, tr: i === cur ? 'scale(1)' : 'scale(1.06)' })),
+      curN: atuData[cur].n, curTag: atuData[cur].tag,
+      words: tagline.split(' ').map((w, i) => ({ t: w + ' ', c: i < 4 ? '#FFCE07' : '#FFFFFF' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

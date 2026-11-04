@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Fotos | Mover Guindastes</title>
+<meta name="description" content="Galeria de operações da Mover Guindastes: guindastes, caminhões munck, containers e içamentos.">
+<link rel="icon" href="https://mover.com.br/wp-content/uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="assets/js/site.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;background:#F4F3EF;color:#141412;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}img{max-width:100%}a{color:#19206E;text-decoration:none}a:hover{color:#141A5C}::selection{background:#FFCE07;color:#141412}:focus-visible{outline:2px solid #FFCE07;outline-offset:3px}</style>
+</helmet>
+<dc-import name="Header" active="fotos" hint-size="100%,72px"></dc-import>
+<main id="conteudo" style="padding-top:72px">
+<section data-screen-label="Fotos" style="max-width:1280px;margin:0 auto;padding:64px clamp(16px,4vw,48px) clamp(64px,8vw,96px)">
+  <nav aria-label="Breadcrumb" style="display:flex;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#57564F"><a href="index.html" style="color:#57564F" style-hover="color:#19206E">Início</a><span>/</span><span style="color:#19206E">Fotos</span></nav>
+  <div style="margin-top:32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+    <h1 style="margin:0;max-width:680px;font-size:clamp(48px,6vw,84px);line-height:0.95;font-weight:800;letter-spacing:-0.045em;text-wrap:balance">Operações em campo.</h1>
+    <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:20px;color:#57564F" aria-live="polite">{{ countLabel }}</span>
+  </div>
+  <div role="group" aria-label="Filtrar por categoria" style="margin-top:48px;display:flex;flex-wrap:wrap;gap:8px;padding-bottom:24px;border-bottom:1px solid rgba(20,20,18,0.14)">
+    <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+      <button type="button" aria-pressed="{{ f.on }}" onClick="{{ f.select }}" style="display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid {{ f.bd }};background:{{ f.bg }};color:{{ f.fg }};font-family:'Archivo',sans-serif;font-size:14px;line-height:20px;font-weight:600;cursor:pointer;transition:background-color 500ms cubic-bezier(0.32,0.72,0,1),color 500ms cubic-bezier(0.32,0.72,0,1)" style-active="transform:scale(0.98)">{{ f.label }}<span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;opacity:0.7">{{ f.n }}</span></button>
+    </sc-for>
+  </div>
+  <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:16px">
+    <sc-for list="{{ shown }}" as="p" hint-placeholder-count="9">
+      <button type="button" onClick="{{ p.open }}" aria-label="{{ p.aria }}" style="position:relative;display:block;padding:0;border:0;background:#EAE8E2;aspect-ratio:10/7;overflow:hidden;cursor:zoom-in">
+        <img src="{{ p.thumb }}" alt="{{ p.alt }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.05)">
+        <span style="position:absolute;left:0;bottom:0;background:#F4F3EF;padding:4px 8px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">{{ p.tag }}</span>
+      </button>
+    </sc-for>
+  </div>
+</section>
+</main>
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Visualizar foto" onClick="{{ close }}" style="position:fixed;inset:0;z-index:80;background:rgba(10,12,32,0.94);display:flex;flex-direction:column;font-family:'Archivo',sans-serif;color:#FFFFFF">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:16px clamp(16px,4vw,48px)">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:20px">{{ lbPos }} · {{ lbTag }}</span>
+      <button type="button" onClick="{{ close }}" aria-label="Fechar" style="width:48px;height:48px;border:1px solid rgba(255,255,255,0.3);background:transparent;color:#FFFFFF;font-size:20px;cursor:pointer" style-hover="background:rgba(255,255,255,0.1)"><i class="ph ph-x"></i></button>
+    </div>
+    <div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center;gap:16px;padding:0 clamp(16px,4vw,48px) 48px">
+      <button type="button" onClick="{{ prev }}" aria-label="Foto anterior" style="flex-shrink:0;width:48px;height:48px;border:1px solid rgba(255,255,255,0.3);background:transparent;color:#FFFFFF;font-size:20px;cursor:pointer" style-hover="background:#FFCE07;color:#141412"><i class="ph ph-arrow-left"></i></button>
+      <img src="{{ lbSrc }}" alt="{{ lbAlt }}" onClick="{{ stop }}" style="max-width:min(100%,1200px);max-height:100%;object-fit:contain;display:block;min-width:0">
+      <button type="button" onClick="{{ next }}" aria-label="Próxima foto" style="flex-shrink:0;width:48px;height:48px;border:1px solid rgba(255,255,255,0.3);background:transparent;color:#FFFFFF;font-size:20px;cursor:pointer" style-hover="background:#FFCE07;color:#141412"><i class="ph ph-arrow-right"></i></button>
+    </div>
+  </div>
+</sc-if>
+<dc-import name="CtaOrcamento" hint-size="100%,760px"></dc-import>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { f: 'Todos', lb: -1 };
+  componentDidMount() {
+    this.onK = (e) => {
+      if (this.state.lb < 0) return;
+      if (e.key === 'Escape') this.setState({ lb: -1 });
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    window.addEventListener('keydown', this.onK);
+  }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onK); }
+  list() {
+    const U = 'https://mover.com.br/wp-content/uploads/';
+    const cats = ['Guindaste', 'Guindaste', 'Guindaste', 'Operações', 'Munck', 'Operações', 'Operações', 'Munck', 'Guindaste', 'Munck', 'Operações', 'Guindaste', 'Munck', 'Operações'];
+    const g = cats.map((c, i) => {
+      const n = String(i + 1).padStart(2, '0');
+      return { thumb: U + 'mover-guindastes-' + n + '-400x280.jpg', full: U + 'mover-guindastes-' + n + '.jpg', tag: c, alt: 'Operação Mover, foto ' + n };
+    });
+    const ct = [
+      ['elementor/thumbs/carrying-container-rl8lexu1medxy6sd8e34g0s1g8ahac6c8r4rg381ui.jpg', 'Container sendo içado'],
+      ['elementor/thumbs/foreman-is-opening-the-container-door-to-inspect-the-goods-inside-the-container-rl8lf78i514tvvevtbqjzm7meqwuccjatzhxcqrwpm.jpg', 'Inspeção de container'],
+      ['elementor/thumbs/business-man-with-shipping-containers-rl8lewwa1uqoc5twhp9nq6tjvibszoe94kbl2p78m2.jpg', 'Pátio de containers'],
+      ['unemployed-foreman-are-sad-business-of-container-cargo-industry-warehouse.jpg', 'Containers em pátio']
+    ].map(([p, alt]) => ({ thumb: U + p, full: U + p, tag: 'Container', alt }));
+    return g.concat(ct);
+  }
+  filtered() { const all = this.list(); return this.state.f === 'Todos' ? all : all.filter(p => p.tag === this.state.f); }
+  step(d) { const n = this.filtered().length; this.setState(s => ({ lb: (s.lb + d + n) % n })); }
+  renderVals() {
+    const all = this.list();
+    const shown = this.filtered();
+    const cats = ['Todos', 'Guindaste', 'Munck', 'Container', 'Operações'];
+    const lb = this.state.lb;
+    const cur = lb >= 0 ? shown[lb] : null;
+    return {
+      countLabel: shown.length + (shown.length === 1 ? ' foto' : ' fotos') + ' · ' + this.state.f,
+      filters: cats.map(c => {
+        const on = c === this.state.f;
+        return { label: c, on, n: c === 'Todos' ? all.length : all.filter(p => p.tag === c).length, bg: on ? '#19206E' : 'transparent', fg: on ? '#FFFFFF' : '#141412', bd: on ? '#19206E' : 'rgba(20,20,18,0.24)', select: () => this.setState({ f: c, lb: -1 }) };
+      }),
+      shown: shown.map((p, i) => ({ ...p, aria: 'Ampliar: ' + p.alt, open: () => this.setState({ lb: i }) })),
+      lbOpen: !!cur,
+      lbSrc: cur ? cur.full : '', lbAlt: cur ? cur.alt : '', lbTag: cur ? cur.tag : '',
+      lbPos: cur ? String(lb + 1).padStart(2, '0') + ' / ' + String(shown.length).padStart(2, '0') : '',
+      close: () => this.setState({ lb: -1 }),
+      stop: (e) => e.stopPropagation(),
+      prev: (e) => { e.stopPropagation(); this.step(-1); },
+      next: (e) => { e.stopPropagation(); this.step(1); }
+    };
+  }
+}
+</script>
+</body>
+</html>

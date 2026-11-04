@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</helmet>
+<a href="#conteudo" style="position:fixed;top:8px;left:8px;z-index:100;padding:8px 12px;background:#FFCE07;color:#141412;font-family:'Archivo',sans-serif;font-size:14px;font-weight:600;transform:translateY(-200%)" style-focus="transform:translateY(0)">Pular para o conteúdo</a>
+<header style="position:fixed;top:0;left:0;right:0;z-index:60;height:72px;background:rgba(244,243,239,0.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(20,20,18,0.12);font-family:'Archivo',sans-serif;color:#141412">
+  <div style="max-width:1280px;height:100%;margin:0 auto;padding:0 clamp(16px,4vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="index.html" aria-label="Mover Guindastes, página inicial" style="display:flex;flex-shrink:0">
+      <img src="https://mover.com.br/wp-content/uploads/logo-mover-guindastes-200x54-1.png" alt="Mover Guindastes e Içamentos" style="height:40px;width:auto;display:block">
+    </a>
+    <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex;align-items:center;gap:32px;font-size:14px;line-height:20px;font-weight:600">
+        <a href="index.html" aria-current="{{ cur.inicio }}" style="position:relative;color:#141412;padding:4px 0;transition:color 400ms cubic-bezier(0.32,0.72,0,1)" style-hover="color:#19206E">Início<sc-if value="{{ a.inicio }}"><span style="position:absolute;left:0;right:0;bottom:-6px;height:2px;background:#FFCE07"></span></sc-if></a>
+        <a href="quem-somos.html" aria-current="{{ cur.quem }}" style="position:relative;color:#141412;padding:4px 0" style-hover="color:#19206E">Quem somos<sc-if value="{{ a.quem }}"><span style="position:absolute;left:0;right:0;bottom:-6px;height:2px;background:#FFCE07"></span></sc-if></a>
+        <div onMouseEnter="{{ openDrop }}" onMouseLeave="{{ closeDrop }}" style="position:relative;height:72px;display:flex;align-items:center">
+          <button type="button" onClick="{{ toggleDrop }}" aria-expanded="{{ dropOpen }}" aria-haspopup="true" style="position:relative;display:flex;align-items:center;gap:4px;background:none;border:0;padding:4px 0;font-family:inherit;font-size:14px;line-height:20px;font-weight:600;color:#141412;cursor:pointer" style-hover="color:#19206E">Equipamentos<i class="ph ph-caret-down" style="font-size:12px"></i><sc-if value="{{ a.equip }}"><span style="position:absolute;left:0;right:0;bottom:-6px;height:2px;background:#FFCE07"></span></sc-if></button>
+          <sc-if value="{{ dropOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute;top:100%;left:-24px;width:340px;background:#F4F3EF;border:1px solid rgba(20,20,18,0.12);box-shadow:0 24px 48px rgba(20,26,92,0.14);padding:8px;display:grid;gap:2px">
+              <a href="guindaste.html" style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;padding:12px 16px;color:#141412;transition:background-color 400ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#EAE8E2;color:#141412">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:20px;color:#19206E">01</span>
+                <span><span style="display:block;font-size:16px;line-height:20px;font-weight:700">Guindaste</span><span style="display:block;font-size:14px;line-height:20px;font-weight:400;color:#57564F">Modelos de 20 t a 80 t</span></span>
+              </a>
+              <a href="caminhao-munck.html" style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;padding:12px 16px;color:#141412;transition:background-color 400ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#EAE8E2;color:#141412">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:20px;color:#19206E">02</span>
+                <span><span style="display:block;font-size:16px;line-height:20px;font-weight:700">Caminhão munck</span><span style="display:block;font-size:14px;line-height:20px;font-weight:400;color:#57564F">Braço articulado para locais apertados</span></span>
+              </a>
+              <a href="container.html" style="display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;padding:12px 16px;color:#141412;transition:background-color 400ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#EAE8E2;color:#141412">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:20px;color:#19206E">03</span>
+                <span><span style="display:block;font-size:16px;line-height:20px;font-weight:700">Container</span><span style="display:block;font-size:14px;line-height:20px;font-weight:400;color:#57564F">Almoxarifado, escritório, banheiro</span></span>
+              </a>
+            </div>
+          </sc-if>
+        </div>
+        <a href="fotos.html" aria-current="{{ cur.fotos }}" style="position:relative;color:#141412;padding:4px 0" style-hover="color:#19206E">Fotos<sc-if value="{{ a.fotos }}"><span style="position:absolute;left:0;right:0;bottom:-6px;height:2px;background:#FFCE07"></span></sc-if></a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:24px;flex-shrink:0">
+        <sc-if value="{{ showPhone }}" hint-placeholder-val="{{ true }}">
+          <a href="tel:+551147558181" style="display:flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:20px;font-weight:500;color:#141412" style-hover="color:#19206E"><i class="ph ph-phone" style="font-size:16px"></i>11 4755-8181</a>
+        </sc-if>
+        <a href="contato.html" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:#19206E;color:#FFFFFF;font-size:14px;line-height:20px;font-weight:600;transition:background-color 500ms cubic-bezier(0.32,0.72,0,1),transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF;transform:translateY(-1px)" style-active="transform:scale(0.98)">Solicitar orçamento</a>
+      </div>
+    </sc-if>
+    <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="{{ menuLabel }}" style="position:relative;width:48px;height:48px;background:#19206E;border:0;cursor:pointer;flex-shrink:0">
+        <span style="position:absolute;left:14px;right:14px;top:23px;height:2px;background:#FFFFFF;transform:{{ l1 }};transition:transform 600ms cubic-bezier(0.32,0.72,0,1)"></span>
+        <span style="position:absolute;left:14px;right:14px;top:23px;height:2px;background:#FFFFFF;transform:{{ l2 }};transition:transform 600ms cubic-bezier(0.32,0.72,0,1)"></span>
+      </button>
+    </sc-if>
+  </div>
+</header>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;top:72px;left:0;right:0;bottom:0;z-index:55;background:rgba(244,243,239,0.9);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);overflow:auto;font-family:'Archivo',sans-serif">
+    <nav aria-label="Menu" style="padding:32px clamp(16px,4vw,48px) 48px;display:grid;gap:4px">
+      <sc-for list="{{ mItems }}" as="m" hint-placeholder-count="8">
+        <a href="{{ m.href }}" style="display:flex;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid rgba(20,20,18,0.12);color:#141412;opacity:{{ m.op }};transform:{{ m.tr }};transition:opacity 700ms cubic-bezier(0.32,0.72,0,1) {{ m.delay }},transform 700ms cubic-bezier(0.32,0.72,0,1) {{ m.delay }}">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E;width:24px">{{ m.n }}</span>
+          <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">{{ m.label }}</span>
+          <sc-if value="{{ m.on }}"><span style="width:8px;height:8px;background:#FFCE07;align-self:center"></span></sc-if>
+        </a>
+      </sc-for>
+      <div style="display:grid;gap:12px;margin-top:32px">
+        <a href="contato.html" style="display:flex;justify-content:center;padding:16px 24px;background:#19206E;color:#FFFFFF;font-size:16px;font-weight:600">Solicitar orçamento</a>
+        <a href="tel:+551147558181" style="display:flex;justify-content:center;gap:8px;padding:16px 24px;border:1px solid #141412;color:#141412;font-family:'IBM Plex Mono',monospace;font-size:14px">11 4755-8181</a>
+      </div>
+    </nav>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;420px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;inicio&quot;,&quot;quem&quot;,&quot;equip&quot;,&quot;fotos&quot;,&quot;depo&quot;,&quot;contato&quot;],&quot;default&quot;:&quot;inicio&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, drop: false, menu: false, shown: false };
+  componentDidMount() {
+    this.onR = () => this.setState({ w: window.innerWidth });
+    this.onK = (e) => { if (e.key === 'Escape') this.setState({ drop: false, menu: false, shown: false }); };
+    window.addEventListener('resize', this.onR);
+    window.addEventListener('keydown', this.onK);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onR);
+    window.removeEventListener('keydown', this.onK);
+  }
+  toggleMenu = () => {
+    if (this.state.menu) { this.setState({ menu: false, shown: false }); document.body.style.overflow = ''; return; }
+    this.setState({ menu: true, shown: false });
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => requestAnimationFrame(() => this.setState({ shown: true })));
+  };
+  renderVals() {
+    const act = this.props.active ?? 'inicio';
+    const keys = ['inicio', 'quem', 'equip', 'fotos', 'depo', 'contato'];
+    const a = {}, cur = {};
+    keys.forEach(k => { a[k] = act === k; cur[k] = act === k ? 'page' : undefined; });
+    const w = this.state.w;
+    const desktop = w >= 1100;
+    const menuOpen = this.state.menu && !desktop;
+    const items = [
+      ['Início', 'index.html', 'inicio'], ['Quem somos', 'quem-somos.html', 'quem'],
+      ['Guindaste', 'guindaste.html', 'equip'], ['Caminhão munck', 'caminhao-munck.html', 'equip'],
+      ['Container', 'container.html', 'equip'], ['Fotos', 'fotos.html', 'fotos']
+    ];
+    const sh = this.state.shown;
+    return {
+      a, cur, desktop, mobile: !desktop, showPhone: w >= 1320,
+      dropOpen: this.state.drop,
+      openDrop: () => this.setState({ drop: true }),
+      closeDrop: () => this.setState({ drop: false }),
+      toggleDrop: () => this.setState(s => ({ drop: !s.drop })),
+      menuOpen, toggleMenu: this.toggleMenu,
+      menuLabel: menuOpen ? 'Fechar menu' : 'Abrir menu',
+      l1: menuOpen ? 'rotate(45deg)' : 'translateY(-4px)',
+      l2: menuOpen ? 'rotate(-45deg)' : 'translateY(4px)',
+      mItems: items.map((it, i) => ({
+        label: it[0], href: it[1], on: act === it[2], n: String(i + 1).padStart(2, '0'),
+        op: sh ? 1 : 0, tr: sh ? 'translateY(0)' : 'translateY(48px)', delay: (100 + i * 50) + 'ms'
+      }))
+    };
+  }
+}
+</script>
+</body>
+</html>

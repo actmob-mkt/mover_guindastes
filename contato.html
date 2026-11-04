@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Solicite um orçamento | Mover Guindastes</title>
+<meta name="description" content="Peça orçamento de guindaste, caminhão munck ou container. Vistoria técnica gratuita. Tel 11 4755-8181, WhatsApp 11 9 4724-4826.">
+<link rel="icon" href="https://mover.com.br/wp-content/uploads/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<script src="assets/js/site.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;background:#F4F3EF;color:#141412;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}img{max-width:100%}a{color:#19206E;text-decoration:none}a:hover{color:#141A5C}::selection{background:#FFCE07;color:#141412}:focus-visible{outline:2px solid #FFCE07;outline-offset:3px}input,textarea{font-family:inherit}</style>
+</helmet>
+<dc-import name="Header" active="contato" hint-size="100%,72px"></dc-import>
+<main id="conteudo" style="padding-top:72px">
+<section data-screen-label="Contato" style="max-width:1280px;margin:0 auto;padding:64px clamp(16px,4vw,48px) clamp(64px,8vw,96px)">
+  <nav aria-label="Breadcrumb" style="display:flex;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#57564F"><a href="index.html" style="color:#57564F" style-hover="color:#19206E">Início</a><span>/</span><span style="color:#19206E">Contato</span></nav>
+  <h1 style="margin:32px 0 0;max-width:900px;font-size:clamp(48px,7vw,96px);line-height:0.95;font-weight:800;letter-spacing:-0.045em;text-wrap:balance">Solicite um orçamento.</h1>
+  <p style="margin:24px 0 0;max-width:560px;font-size:18px;line-height:28px;color:#3C3B36;text-wrap:pretty">Descreva a carga e o local. Respondemos em horário comercial e agendamos a vistoria técnica gratuita.</p>
+  <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:stretch">
+    <div>
+      <sc-if value="{{ isForm }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}" novalidate="" style="display:grid;gap:24px">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px">
+            <label style="display:grid;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#19206E">Nome *</span><input name="nome" value="{{ v.nome }}" onChange="{{ on.nome }}" autocomplete="name" aria-invalid="{{ inv.nome }}" style="width:100%;padding:12px 16px;font-size:16px;line-height:24px;background:#FFFFFF;color:#141412;border:1px solid {{ bd.nome }};border-radius:0;outline:none" style-focus="border-color:#19206E;box-shadow:0 0 0 3px rgba(255,206,7,0.6)"><sc-if value="{{ e.nome }}"><span style="font-size:14px;line-height:20px;color:#B42318">{{ e.nome }}</span></sc-if></label>
+            <label style="display:grid;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#19206E">Empresa</span><input name="empresa" value="{{ v.empresa }}" onChange="{{ on.empresa }}" autocomplete="organization" style="width:100%;padding:12px 16px;font-size:16px;line-height:24px;background:#FFFFFF;color:#141412;border:1px solid rgba(20,20,18,0.24);border-radius:0;outline:none" style-focus="border-color:#19206E;box-shadow:0 0 0 3px rgba(255,206,7,0.6)"></label>
+            <label style="display:grid;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#19206E">Telefone *</span><input name="tel" type="tel" value="{{ v.tel }}" onChange="{{ on.tel }}" autocomplete="tel" placeholder="11 9 0000 0000" aria-invalid="{{ inv.tel }}" style="width:100%;padding:12px 16px;font-size:16px;line-height:24px;background:#FFFFFF;color:#141412;border:1px solid {{ bd.tel }};border-radius:0;outline:none" style-focus="border-color:#19206E;box-shadow:0 0 0 3px rgba(255,206,7,0.6)"><sc-if value="{{ e.tel }}"><span style="font-size:14px;line-height:20px;color:#B42318">{{ e.tel }}</span></sc-if></label>
+            <label style="display:grid;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#19206E">E-mail *</span><input name="email" type="email" value="{{ v.email }}" onChange="{{ on.email }}" autocomplete="email" aria-invalid="{{ inv.email }}" style="width:100%;padding:12px 16px;font-size:16px;line-height:24px;background:#FFFFFF;color:#141412;border:1px solid {{ bd.email }};border-radius:0;outline:none" style-focus="border-color:#19206E;box-shadow:0 0 0 3px rgba(255,206,7,0.6)"><sc-if value="{{ e.email }}"><span style="font-size:14px;line-height:20px;color:#B42318">{{ e.email }}</span></sc-if></label>
+          </div>
+          <fieldset style="margin:0;padding:0;border:0;display:grid;gap:12px">
+            <legend style="padding:0;margin-bottom:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#19206E">Serviços de interesse</legend>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+                <button type="button" aria-pressed="{{ c.on }}" onClick="{{ c.toggle }}" style="display:flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid {{ c.bd }};background:{{ c.bg }};color:{{ c.fg }};font-family:'Archivo',sans-serif;font-size:14px;line-height:20px;font-weight:600;cursor:pointer;transition:background-color 400ms cubic-bezier(0.32,0.72,0,1),color 400ms cubic-bezier(0.32,0.72,0,1)" style-active="transform:scale(0.98)"><i class="{{ c.icon }}"></i>{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </fieldset>
+          <label style="display:grid;gap:8px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#19206E">Descreva a operação</span><textarea name="desc" rows="5" value="{{ v.desc }}" onChange="{{ on.desc }}" placeholder="Peso aproximado, dimensões, endereço e prazo" style="width:100%;padding:12px 16px;font-size:16px;line-height:24px;background:#FFFFFF;color:#141412;border:1px solid rgba(20,20,18,0.24);border-radius:0;outline:none;resize:vertical" style-focus="border-color:#19206E;box-shadow:0 0 0 3px rgba(255,206,7,0.6)"></textarea></label>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px">
+            <button type="submit" disabled="{{ sending }}" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;border:0;background:#FFCE07;color:#141412;font-family:'Archivo',sans-serif;font-size:16px;line-height:24px;font-weight:600;cursor:pointer;opacity:{{ btnOp }};transition:transform 500ms cubic-bezier(0.32,0.72,0,1),background-color 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#F5C400;transform:translateY(-2px)" style-active="transform:scale(0.98)">{{ btnLabel }}<i class="ph ph-arrow-right"></i></button>
+            <span style="font-size:14px;line-height:20px;color:#57564F">* Campos obrigatórios</span>
+          </div>
+        </form>
+      </sc-if>
+      <sc-if value="{{ isSent }}" hint-placeholder-val="{{ false }}">
+        <div role="status" style="border:1px solid rgba(20,20,18,0.16);padding:clamp(32px,5vw,48px);display:grid;gap:24px;justify-items:start">
+          <span style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#FFCE07;color:#19206E;font-size:24px"><i class="ph ph-check"></i></span>
+          <h2 style="margin:0;font-size:36px;line-height:40px;font-weight:800;letter-spacing:-0.03em;text-wrap:balance">Pedido recebido, {{ firstName }}.</h2>
+          <p style="margin:0;max-width:480px;font-size:18px;line-height:28px;color:#3C3B36">Um técnico da Mover vai ligar para {{ v.tel }} em horário comercial para entender a operação e agendar a vistoria.</p>
+          <sc-if value="{{ hasChips }}"><p style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:14px;line-height:20px;color:#19206E">Serviços: {{ chipList }}</p></sc-if>
+          <button type="button" onClick="{{ reset }}" style="padding:12px 16px;border:1px solid #19206E;background:transparent;color:#19206E;font-family:'Archivo',sans-serif;font-size:14px;line-height:20px;font-weight:600;cursor:pointer" style-hover="background:rgba(25,32,110,0.06)">Enviar outro pedido</button>
+        </div>
+      </sc-if>
+    </div>
+    <aside style="display:flex;flex-direction:column">
+      <div style="background:#19206E;color:#FFFFFF;padding:clamp(32px,4vw,48px);flex:1;display:flex;flex-direction:column;justify-content:space-between">
+        <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:0 0 32px;border-bottom:1px solid rgba(255,255,255,0.2);color:#FFFFFF" style-hover="color:#FFCE07"><i class="ph ph-whatsapp-logo" style="font-size:32px;color:#FFCE07"></i><span style="display:grid;gap:4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.72)">WhatsApp</span><span style="font-size:clamp(24px,2.6vw,30px);line-height:36px;font-weight:700">11 9 4724-4826</span></span></a>
+        <a href="tel:+551147558181" style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.2);color:#FFFFFF" style-hover="color:#FFCE07"><i class="ph ph-phone" style="font-size:32px;color:#FFCE07"></i><span style="display:grid;gap:4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.72)">Telefone</span><span style="font-size:clamp(24px,2.6vw,30px);line-height:36px;font-weight:700">11 4755-8181</span></span></a>
+        <div style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.2)"><i class="ph ph-map-pin" style="font-size:32px;color:#FFCE07"></i><span style="display:grid;gap:4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.72)">Endereço</span><span style="font-size:18px;line-height:28px">R. Santa Helena, 80, Campo da Venda<br>Itaquaquecetuba, SP</span></span></div>
+        <div style="display:grid;grid-template-columns:48px minmax(0,1fr);gap:16px;padding:32px 0 0"><i class="ph ph-clock" style="font-size:32px;color:#FFCE07"></i><span style="display:grid;gap:4px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.72)">Horário</span><span style="font-size:18px;line-height:28px">Seg a Sex, 8h às 18h<br>Emergências 24h</span></span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+<section aria-label="Mapa" style="width:100%;height:clamp(360px,50vw,560px);background:#EAE8E2;border-top:1px solid rgba(20,20,18,0.14)">
+  <iframe title="Mapa: R. Santa Helena, 80, Itaquaquecetuba" src="https://www.google.com/maps?q=R.+Santa+Helena,+80,+Campo+da+Venda,+Itaquaquecetuba,+SP&amp;output=embed" loading="lazy" style="width:100%;height:100%;border:0;display:block;filter:grayscale(1) contrast(1.05)"></iframe>
+</section>
+</main>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { v: { nome: '', empresa: '', tel: '', email: '', desc: '' }, chips: [], err: {}, tried: false, status: 'idle' };
+  validate(v) {
+    const e = {};
+    if (!v.nome.trim()) e.nome = 'Informe seu nome.';
+    if (v.tel.replace(/\D/g, '').length < 10) e.tel = 'Informe um telefone com DDD.';
+    if (!v.email.trim()) e.email = 'Informe seu e-mail.';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email.trim())) e.email = 'E-mail inválido. Confira o endereço.';
+    return e;
+  }
+  set(k, val) { this.setState(s => { const v = { ...s.v, [k]: val }; return { v, err: s.tried ? this.validate(v) : s.err }; }); }
+  submit = (ev) => {
+    ev.preventDefault();
+    const err = this.validate(this.state.v);
+    this.setState({ err, tried: true });
+    if (Object.keys(err).length) return;
+    this.setState({ status: 'sending' });
+    setTimeout(() => this.setState({ status: 'sent' }), 900);
+  };
+  renderVals() {
+    const { v, err, status, chips } = this.state;
+    const opts = [['Guindaste', 'ph ph-crane'], ['Caminhão munck', 'ph ph-truck'], ['Container', 'ph ph-shipping-container'], ['Plano de rigging', 'ph ph-clipboard-text'], ['Mudança industrial', 'ph ph-factory'], ['Outro', 'ph ph-dots-three']];
+    const on = {}; ['nome', 'empresa', 'tel', 'email', 'desc'].forEach(k => on[k] = (ev) => this.set(k, ev.target.value));
+    const bd = {}, inv = {};
+    ['nome', 'tel', 'email'].forEach(k => { bd[k] = err[k] ? '#B42318' : 'rgba(20,20,18,0.24)'; inv[k] = err[k] ? 'true' : undefined; });
+    const sending = status === 'sending';
+    return {
+      v, on, bd, inv, e: err,
+      isForm: status !== 'sent', isSent: status === 'sent',
+      sending, btnOp: sending ? 0.6 : 1, btnLabel: sending ? 'Enviando pedido' : 'Enviar pedido de orçamento',
+      submit: this.submit,
+      chips: opts.map(([label, icon]) => {
+        const o = chips.includes(label);
+        return { label, icon, on: o, bg: o ? '#19206E' : 'transparent', fg: o ? '#FFFFFF' : '#141412', bd: o ? '#19206E' : 'rgba(20,20,18,0.24)',
+          toggle: () => this.setState(s => ({ chips: s.chips.includes(label) ? s.chips.filter(x => x !== label) : [...s.chips, label] })) };
+      }),
+      firstName: v.nome.trim().split(' ')[0],
+      hasChips: chips.length > 0, chipList: chips.join(', '),
+      reset: () => this.setState({ v: { nome: '', empresa: '', tel: '', email: '', desc: '' }, chips: [], err: {}, tried: false, status: 'idle' })
+    };
+  }
+}
+</script>
+</body>
+</html>
