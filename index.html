@@ -10,45 +10,46 @@
 <helmet>
 <title>Mover Guindastes | Aluguel de guindaste, munck e container em Itaquaquecetuba</title>
 <meta name="description" content="Içamento e transporte de cargas pesadas. Aluguel de guindaste até 80 t, caminhão munck e containers com vistoria técnica gratuita. Grande SP e Litoral.">
-<link rel="icon" href="https://mover.com.br/wp-content/uploads/favicon.png">
+<link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <script src="assets/js/site.js"></script>
 <style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#F4F3EF;color:#141412;font-family:'Archivo',system-ui,sans-serif;-webkit-font-smoothing:antialiased}img{max-width:100%}a{color:#19206E;text-decoration:none}a:hover{color:#141A5C}::selection{background:#FFCE07;color:#141412}:focus-visible{outline:2px solid #FFCE07;outline-offset:3px}</style>
 </helmet>
-<dc-import name="Header" active="inicio" hint-size="100%,72px"></dc-import>
-<main id="conteudo" style="padding-top:72px">
+<dc-import name="Header" active="inicio" hint-size="100%,120px"></dc-import>
+<main id="conteudo" style="padding-top:120px">
 
 <sc-if value="{{ heroFoto }}" hint-placeholder-val="{{ true }}">
-<section data-screen-label="Início hero foto" style="position:relative;min-height:max(600px, calc(100svh - 72px));display:flex;align-items:flex-end;background:#141A5C;overflow:hidden;color:#FFFFFF">
-  <img src="https://mover.com.br/wp-content/uploads/transporte-de-maquinas-cargas-pesadas-01.jpg" alt="Equipe da Mover transportando máquina pesada" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-  <div style="position:absolute;inset:0;background:rgba(12,14,36,0.62)"></div>
+<section data-screen-label="Início hero foto" style="position:relative;min-height:max(600px, calc(100svh - 120px));display:flex;align-items:flex-end;background:#141A5C;overflow:hidden;color:#FFFFFF">
+  <img src="assets/img/transporte-de-maquinas-cargas-pesadas-01.jpg" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+  <video src="{{ heroVideo }}" poster="assets/img/transporte-de-maquinas-cargas-pesadas-01.jpg" data-loop="1" autoplay muted loop playsinline preload="auto" aria-label="Vídeo: equipe da Mover transportando máquina pesada" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,30,0.7) 0%,rgba(8,10,30,0.35) 65%,rgba(8,10,30,0.2) 100%),linear-gradient(180deg,rgba(8,10,30,0.55) 0%,rgba(8,10,30,0.7) 50%,rgba(8,10,30,0.92) 100%)"></div>
   <div style="position:relative;width:100%;max-width:1280px;margin:0 auto;padding:96px clamp(16px,4vw,48px) 80px">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#FFCE07">Itaquaquecetuba · Grande SP e Litoral</div>
     <h1 style="margin:24px 0 0;max-width:920px;font-size:clamp(48px,7.5vw,96px);line-height:0.95;font-weight:800;letter-spacing:-0.045em;text-wrap:balance">Içamento e transporte<br>de cargas pesadas.</h1>
     <p style="margin:32px 0 0;max-width:560px;font-size:18px;line-height:28px;color:rgba(255,255,255,0.88);text-wrap:pretty">Aluguel de guindaste, caminhão munck e containers, com vistoria técnica gratuita e plano de rigging em cada operação.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px">
-      <a href="contato.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;background:#FFCE07;color:#141412;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1),background-color 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#F5C400;color:#141412;transform:translateY(-2px)" style-active="transform:scale(0.98)">Pedir orçamento<i class="ph ph-arrow-right"></i></a>
-      <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;padding:15px 23px;border:1px solid rgba(255,255,255,0.7);color:#FFFFFF;font-size:16px;line-height:24px;font-weight:600;transition:background-color 500ms cubic-bezier(0.32,0.72,0,1),transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:rgba(255,255,255,0.12);color:#FFFFFF;transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph ph-whatsapp-logo" style="font-size:20px"></i>WhatsApp</a>
+      <a href="contato.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;background:#FFCE07;color:#141412;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1),background-color 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#F5C400;color:#141412;transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph-fill ph-clipboard-text" style="font-size:20px"></i>Pedir orçamento<i class="ph-bold ph-arrow-right" style="font-size:18px"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;padding:15px 23px;border:1px solid rgba(255,255,255,0.7);color:#FFFFFF;font-size:16px;line-height:24px;font-weight:600;transition:background-color 500ms cubic-bezier(0.32,0.72,0,1),transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:rgba(255,255,255,0.12);color:#FFFFFF;transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph-fill ph-whatsapp-logo" style="font-size:22px;color:#25D366"></i>WhatsApp<i class="ph-bold ph-arrow-up-right" style="font-size:16px"></i></a>
     </div>
   </div>
 </section>
 </sc-if>
 
 <sc-if value="{{ heroSplit }}" hint-placeholder-val="{{ false }}">
-<section data-screen-label="Início hero dividido" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));min-height:calc(100svh - 72px);border-bottom:1px solid rgba(20,20,18,0.14)">
+<section data-screen-label="Início hero dividido" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));min-height:calc(100svh - 120px);border-bottom:1px solid rgba(20,20,18,0.14)">
   <div style="display:flex;flex-direction:column;justify-content:center;padding:80px clamp(16px,4vw,64px)">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">Itaquaquecetuba · Grande SP e Litoral</div>
     <h1 style="margin:24px 0 0;max-width:680px;font-size:clamp(48px,6vw,84px);line-height:0.95;font-weight:800;letter-spacing:-0.045em;text-wrap:balance">Içamento e transporte de cargas pesadas.</h1>
     <p style="margin:32px 0 0;max-width:520px;font-size:18px;line-height:28px;color:#3C3B36;text-wrap:pretty">Aluguel de guindaste, caminhão munck e containers, com vistoria técnica gratuita e plano de rigging em cada operação.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px">
-      <a href="contato.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;background:#FFCE07;color:#141412;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="color:#141412;transform:translateY(-2px)" style-active="transform:scale(0.98)">Pedir orçamento<i class="ph ph-arrow-right"></i></a>
-      <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;padding:15px 23px;border:1px solid #19206E;color:#19206E;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:rgba(25,32,110,0.06);transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph ph-whatsapp-logo" style="font-size:20px"></i>WhatsApp</a>
+      <a href="contato.html" style="display:inline-flex;align-items:center;gap:12px;padding:16px 24px;background:#FFCE07;color:#141412;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="color:#141412;transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph-fill ph-clipboard-text" style="font-size:20px"></i>Pedir orçamento<i class="ph-bold ph-arrow-right" style="font-size:18px"></i></a>
+      <a href="https://api.whatsapp.com/send?phone=5511947244826" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;padding:15px 23px;border:1px solid #19206E;color:#19206E;font-size:16px;line-height:24px;font-weight:600;transition:transform 500ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:rgba(25,32,110,0.06);transform:translateY(-2px)" style-active="transform:scale(0.98)"><i class="ph-fill ph-whatsapp-logo" style="font-size:22px;color:#25D366"></i>WhatsApp<i class="ph-bold ph-arrow-up-right" style="font-size:16px"></i></a>
     </div>
   </div>
   <div style="position:relative;min-height:420px;background:#EAE8E2">
-    <img src="https://mover.com.br/wp-content/uploads/mover-guindastes-03.jpg" alt="Guindaste da Mover em operação" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    <img src="assets/img/mover-guindastes-03.jpg" alt="Guindaste da Mover em operação" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
   </div>
 </section>
 </sc-if>
@@ -76,7 +77,7 @@
       <a href="quem-somos.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:32px;font-size:16px;line-height:24px;font-weight:600;color:#19206E;padding-bottom:4px;border-bottom:2px solid #FFCE07" style-hover="color:#141A5C;gap:12px">Conheça a Mover<i class="ph ph-arrow-right"></i></a>
     </div>
     <div data-reveal="" style="position:relative">
-      <div style="aspect-ratio:4/5;background:#EAE8E2;overflow:hidden"><img src="https://mover.com.br/wp-content/uploads/mover-guindastes-01.jpg" alt="Operação de içamento da Mover" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="aspect-ratio:4/5;background:#EAE8E2;overflow:hidden"><img src="assets/img/mover-guindastes-01.jpg" alt="Operação de içamento da Mover" style="width:100%;height:100%;object-fit:cover;display:block"></div>
       <div style="position:absolute;left:-1px;bottom:-1px;background:#19206E;color:#FFFFFF;padding:24px;display:grid;gap:4px">
         <span style="font-size:48px;line-height:1;font-weight:800;letter-spacing:-0.04em">10+</span>
         <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;letter-spacing:0.08em;text-transform:uppercase;color:#FFCE07">Anos de içamentos</span>
@@ -104,7 +105,7 @@
     </div>
     <div style="margin-top:64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px">
       <a href="guindaste.html" data-reveal="" style="display:flex;flex-direction:column;color:#FFFFFF;border:1px solid rgba(255,255,255,0.2);transition:background-color 600ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF">
-        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="https://mover.com.br/wp-content/uploads/elementor/thumbs/guindaste-banner-01-rl8lf78fiqqt6aeppi5e4yene305fb7nm1nm8uu44a.jpg" alt="Guindaste da Mover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="assets/img/guindaste-banner-01-rl8lf78fiqqt6aeppi5e4yene305fb7nm1nm8uu44a.jpg" alt="Guindaste da Mover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
         <div style="padding:24px;display:grid;gap:12px;flex:1">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#FFCE07">01 · 20 t a 80 t</span>
           <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">Guindaste</span>
@@ -113,7 +114,7 @@
         </div>
       </a>
       <a href="caminhao-munck.html" data-reveal="" style="display:flex;flex-direction:column;color:#FFFFFF;border:1px solid rgba(255,255,255,0.2);transition:background-color 600ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF">
-        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="https://mover.com.br/wp-content/uploads/elementor/thumbs/caminhao-munk-imagem-01-rl8leww7fkcnmktqdvohvj0kuuf42n2lwmh9yt9g0q.jpg" alt="Caminhão munck da Mover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="assets/img/caminhao-munk-imagem-01-rl8leww7fkcnmktqdvohvj0kuuf42n2lwmh9yt9g0q.jpg" alt="Caminhão munck da Mover" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
         <div style="padding:24px;display:grid;gap:12px;flex:1">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#FFCE07">02 · 4 modelos</span>
           <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">Caminhão munck</span>
@@ -122,7 +123,7 @@
         </div>
       </a>
       <a href="container.html" data-reveal="" style="display:flex;flex-direction:column;color:#FFFFFF;border:1px solid rgba(255,255,255,0.2);transition:background-color 600ms cubic-bezier(0.32,0.72,0,1)" style-hover="background:#141A5C;color:#FFFFFF">
-        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="https://mover.com.br/wp-content/uploads/elementor/thumbs/carrying-container-rl8lexu1medxy6sd8e34g0s1g8ahac6c8r4rg381ui.jpg" alt="Container sendo içado" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
+        <div style="aspect-ratio:4/3;overflow:hidden;background:#141A5C"><img src="assets/img/carrying-container-rl8lexu1medxy6sd8e34g0s1g8ahac6c8r4rg381ui.jpg" alt="Container sendo içado" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 900ms cubic-bezier(0.32,0.72,0,1)" style-hover="transform:scale(1.04)"></div>
         <div style="padding:24px;display:grid;gap:12px;flex:1">
           <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#FFCE07">03 · 20' e 40'</span>
           <span style="font-size:30px;line-height:36px;font-weight:700;letter-spacing:-0.02em">Container</span>
@@ -237,7 +238,7 @@
       <li data-reveal="" style="padding-top:24px;border-top:2px solid #19206E;display:grid;gap:12px;align-content:start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">Etapa 03</span><span style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Revisão</span><span style="font-size:16px;line-height:24px;color:#3C3B36">Os engenheiros revisam cada etapa com os dados coletados antes de liberar a operação.</span></li>
       <li data-reveal="" style="padding-top:24px;border-top:2px solid #FFCE07;display:grid;gap:12px;align-content:start"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;color:#19206E">Etapa 04</span><span style="font-size:24px;line-height:32px;font-weight:700;letter-spacing:-0.02em">Execução segura</span><span style="font-size:16px;line-height:24px;color:#3C3B36">A carga sobe com supervisão técnica e a segurança de todos os envolvidos em primeiro lugar.</span></li>
     </ol>
-    <div data-reveal="" style="margin-top:64px;aspect-ratio:21/9;background:#D9D6CE;overflow:hidden"><img src="https://mover.com.br/wp-content/uploads/mover-guindastes-06.jpg" alt="Panorâmica de operação com guindaste da Mover" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div data-reveal="" style="position:relative;margin-top:64px;aspect-ratio:21/9;min-height:280px;background:#D9D6CE;overflow:hidden"><img src="assets/img/rigging-guindaste.jpg" alt="Guindaste com lança telescópica pronto para içamento" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block"></div>
   </div>
 </section>
 
@@ -254,7 +255,7 @@
   </div>
 </section>
 
-<section id="depoimentos" data-screen-label="Depoimentos" style="scroll-margin-top:72px;border-top:1px solid rgba(20,20,18,0.14)">
+<section id="depoimentos" data-screen-label="Depoimentos" style="scroll-margin-top:120px;border-top:1px solid rgba(20,20,18,0.14)">
   <div style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(16px,4vw,48px)">
     <div data-reveal="">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#19206E">07 — Depoimentos</div>
@@ -293,14 +294,24 @@
 <dc-import name="CtaOrcamento" hint-size="100%,760px"></dc-import>
 <dc-import name="Footer" hint-size="100%,520px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;foto&quot;,&quot;dividido&quot;],&quot;default&quot;:&quot;foto&quot;,&quot;tsType&quot;:&quot;'foto' | 'dividido'&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;foto&quot;,&quot;dividido&quot;],&quot;default&quot;:&quot;foto&quot;,&quot;tsType&quot;:&quot;'foto' | 'dividido'&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;heroVideo&quot;:{&quot;editor&quot;:&quot;string&quot;,&quot;default&quot;:&quot;assets/video-banner.mp4&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;rigVideo&quot;:{&quot;editor&quot;:&quot;string&quot;,&quot;default&quot;:&quot;assets/video-operacao.mp4&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Rigging&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
 class Component extends DCLogic {
   state = { atu: 0 };
+  componentDidMount() {
+    this.loopVids = () => document.querySelectorAll('video[data-loop]').forEach(v => {
+      v.loop = true; v.muted = true; v.defaultMuted = true; v.playsInline = true;
+      if (!v.dataset.lp) { v.dataset.lp = '1'; v.addEventListener('ended', () => { v.currentTime = 0; v.play().catch(() => {}); }); }
+      if (v.paused && v.readyState >= 2) v.play().catch(() => {});
+    });
+    this.loopVids();
+    this.loopT = setInterval(this.loopVids, 1500);
+  }
+  componentWillUnmount() { clearInterval(this.loopT); }
   renderVals() {
     const v = this.props.heroVariant ?? 'foto';
-    const U = 'https://mover.com.br/wp-content/uploads/';
+    const U = 'assets/img/';
     const atuData = [
-      { n: '01', t: 'Transporte e movimentação', d: 'Transporte e remoção de máquinas e movimentação de cargas pesadas, dentro ou fora da planta.', tag: 'Máquinas e cargas pesadas', src: U + 'elementor/thumbs/transporte-de-maquinas-cargas-pesadas-01-rl8lfq19id9auu6wtgqyygmekx9bxvpd6azrz4gj3s.jpg', alt: 'Transporte de máquina pesada' },
+      { n: '01', t: 'Transporte e movimentação', d: 'Transporte e remoção de máquinas e movimentação de cargas pesadas, dentro ou fora da planta.', tag: 'Máquinas e cargas pesadas', src: U + 'transporte-de-maquinas-cargas-pesadas-01-rl8lfq19id9auu6wtgqyygmekx9bxvpd6azrz4gj3s.jpg', alt: 'Transporte de máquina pesada' },
       { n: '02', t: 'Içamentos', d: 'Estruturas que erguem cargas de até 70 toneladas, com equipe capacitada e plano aprovado.', tag: 'Até 70 t por içamento', src: U + 'mover-guindastes-07.jpg', alt: 'Içamento de carga pesada' },
       { n: '03', t: 'Mudança industrial', d: 'Remoções técnicas, instalações industriais e mudança de layout com todos os equipamentos necessários.', tag: 'Layout e remoção técnica', src: U + 'mover-guindastes-04.jpg', alt: 'Mudança industrial' }
     ];
@@ -308,6 +319,8 @@ class Component extends DCLogic {
     const tagline = 'Juntos movemos o mundo. Cada içamento começa no chão, com vistoria, cálculo e um plano que toda a equipe entende.';
     return {
       heroFoto: v === 'foto', heroSplit: v === 'dividido',
+      heroVideo: this.props.heroVideo ?? 'assets/video-banner.mp4',
+      rigVideo: this.props.rigVideo ?? 'assets/video-operacao.mp4',
       showStats: this.props.showStats ?? true,
       setores: ['Siderurgia', 'Mineração', 'Química e petroquímica', 'Usinas hidrelétricas', 'Papel e celulose', 'Metalurgia', 'Gráficas', 'Construção civil'].map((t, i) => ({ t, n: String(i + 1).padStart(2, '0') })),
       atu: atuData.map((a, i) => ({
